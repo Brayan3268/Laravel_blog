@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//This controller is for the posts pages
 class PostController extends Controller
 {
     public function index(){

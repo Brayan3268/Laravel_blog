@@ -6,6 +6,9 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
+/**
+ * This class is the 1/2 part of a class component, the other way for use a component
+ */
 class Alert2 extends Component
 {
     public $class;

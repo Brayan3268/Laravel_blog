@@ -1,4 +1,5 @@
-@props(['type' => 'info']) <!-- Valor por defecto => 'info' -->
+<!-- This is a component anonymous with the logic and the view code together -->
+@props(['type' => 'info']) <!-- Default value => 'info' -->
 
 @php
     switch ($type) {
@@ -22,7 +23,6 @@
             break;
     }
 @endphp
-
 
 <div {{ $attributes->merge(['class' => 'p-4 text-sm rounded-lg ' . $class ]) }} role="alert">
     <span class="font-medium">{{ $title ?? 'Title undefined' }}</span> {{ $slot }}

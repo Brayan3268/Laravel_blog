@@ -40,4 +40,14 @@ class Post extends Model
             }
         );
     }
+
+    /**
+     * Cast after and before to query the db
+     */
+    protected function casts(): array{
+        return [
+            'published_at' => 'datetime',
+            'is_activate' => 'boolean',
+        ];
+    }
 }

@@ -16,6 +16,9 @@ Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
 
 Route::get('/prueba', function(){
+    $post = Post::find(1);
+    dd($post->is_activate);
+
     /*
     Create a new register in the post table
 
@@ -35,8 +38,7 @@ Route::get('/prueba', function(){
     $post = Post::find(1);
     return $post;
     */
-    $post = Post::find(4);
-    return $post;
+    
     /*
     Find the first register with the value 'Titulo de prueba 2' in the column 'title'
     $post = Post::where('title', 'Titulo de prueba 2')->first();

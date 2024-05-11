@@ -44,4 +44,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function address()
+    {
+        return $this->hasOne(Address::class);
+        /*return $this->hasOne(Address::class, 'user_id'(In the other table 
+        exist a field with this name)(Name of the foreingkey), 'id'(Name of the pk
+        field in this table));*/
+    }
 }

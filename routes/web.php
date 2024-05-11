@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Models\Post;
 
 #Route::get('/', function () {
 #    return view('welcome');
@@ -13,6 +14,90 @@ Route::get('/', HomeController::class);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
+
+Route::get('/prueba', function(){
+    /*
+    Create a new register in the post table
+
+    $post = new Post;
+
+    $post->title = 'Titulo de prueba 2';
+    $post->content = 'Contenido de prueba 2';
+    $post->category = 'Categoria de prueba 2';
+
+    $post->save();
+
+    return $post;
+    */
+
+    /*
+    Find a register with the id '1'
+    $post = Post::find(1);
+    return $post;
+    */
+    $post = Post::find(4);
+    return $post;
+    /*
+    Find the first register with the value 'Titulo de prueba 2' in the column 'title'
+    $post = Post::where('title', 'Titulo de prueba 2')->first();
+    return $post;
+    */
+    
+    /*
+    Modify a register
+    $post = Post::where('title', 'Titulo de prueba 2')->first();
+    $post->category = 'Desarrollo web';
+    $post->save();
+
+    return $post;
+    */
+    
+    /*
+    Get all registers
+    $post = Post::all();
+
+    return $post;
+
+    $post = Post::get();
+
+    return $post;
+    */
+    
+    /*
+    Get the register with the id are greater than 2
+    $post = Post::where('id', '>=', '2')->get();
+
+    return $post;
+    */
+
+    /*
+    $post = Post::orderby('id', 'desc')->get();
+    return $post;
+
+    $post = Post::orderby('id', 'desc')
+        ->select('id', 'title', 'category')
+        ->take(2)
+        ->get();
+    return $post;
+    */
+    
+    /*
+    Delete a register
+    $post = Post::find('1');
+    $post->delete();
+
+    return "Deleted correctly";
+    */
+
+    /*
+    
+    */
+
+    /*
+    
+    */
+
+});
 
 /*
 Route::get('/posts/{post}/{category}', function ($post, $category) {

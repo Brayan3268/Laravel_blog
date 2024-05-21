@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Models\Address;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\User;
 
@@ -18,8 +19,8 @@ Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
 
 Route::get('/prueba', function(){
-    $address = Address::find(1);
-    return $address->user;
+    $comments = Comment::first();
+    return $comments->post;
 
     /*
     Create a new register in the post table
@@ -94,7 +95,8 @@ Route::get('/prueba', function(){
     */
 
     /*
-    
+    $post = Post::find(1);
+    return $post->comments;
     */
 
     /*

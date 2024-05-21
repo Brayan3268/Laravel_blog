@@ -50,4 +50,11 @@ class Post extends Model
             'is_activate' => 'boolean',
         ];
     }
+
+    /**
+     * Relation one to many
+     */
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }

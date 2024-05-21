@@ -65,3 +65,77 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # Laravel_blog
+
+-------------------------------------------------------
+
+# Commands for php
+
+# Way for create a laravel project.
+1) composer create-project laravel/laravel NOMBRE-DE-LA-APP
+2) composer global require laravel/installer #Installer
+    laravel NOMBRE-DE-LA-APP
+
+# Change the name server app.
+
+Go to the path C:\xampp\apache\conf\extra\httpd-vhosts.conf
+Add next lines:
+
+<VirtualHost *:80>
+    ServerName localhost
+    DocumentRoot "C:/xampp/htdocs"
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName blog.test
+    DocumentRoot "C:/xampp/htdocs/laravel/blog/public"
+</VirtualHost>
+
+# 1. How to create a controller.
+php artisan make:controller <<Name>>Controller
+
+# 2. How to create a component.
+php artisan make:component <<Name>>
+
+# 3. Create tables in DB (Execute up methods in the migration tables for blocks)
+php artisan migrate
+
+# 4. Delete tables in DB (Execute down methods in the migration tables for blocks)
+php artisan migrate:rollback
+
+# 5. Create a new migration
+php artisan make: migration create_<<plural-name>>_table
+
+# 6. Execute all down methods from migrations, don't care the block number, and before
+# Execute all up methods (it's mean, just delete and create the tables in the migrations
+# if you create a table in the db, this table getn't affected)
+php artisan migrate:refresh
+
+# 7. Delete all the tables in the db, don't care if the tables are migration or not and create again
+php artisan migrate:fresh
+
+# 8. Create a migration for modify table
+php artisan make:migration add_<<namecolumn>>_to_users_table
+
+# 9. Create a new model file
+php artisan make:model <<Name>>
+
+# 10. Create a register in the db on the DatabaseSeeder file
+php artisan db:seed
+
+# 11. Combine the comand 7 and 10
+php artisan migrate:fresh --seed
+
+# 12. Create a seeder file
+php artisan make:seeder <<Name>>Seeder
+
+# 13. Create a factory file
+php artisan make:factory <<ModelName>>Factory
+
+
+
+
+
+
+
+
+

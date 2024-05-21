@@ -130,12 +130,3 @@ php artisan make:seeder <<Name>>Seeder
 
 # 13. Create a factory file
 php artisan make:factory <<ModelName>>Factory
-
-
-
-
-
-
-
-
-

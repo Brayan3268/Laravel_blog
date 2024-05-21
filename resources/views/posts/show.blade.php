@@ -7,6 +7,12 @@
     <title>Laravel 11 | Posts</title>
 </head>
 <body>
-    <h1>Welcome to the post {{ $post }} page</h1>
+    <a href="/posts">Volver a posts</a>
+    <h1>Titulo: {{ $post->title }}</h1>
+    <p>
+        <b>Categoría:</b> {{ $post->category }}
+    <p>
+        {{ $post->content }}
+    </p>
 </body>
 </html>

@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     {{-- fontawesome --}}
     {{-- tipografia --}}
 

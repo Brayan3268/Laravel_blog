@@ -16,5 +16,12 @@
     </p>
 
     <a href="/posts/{{ $post->id }}/edit">Editar post</a>
+    <br><br>
+    <form action="/posts/{{ $post->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+
+        <button type="submit">Eliminar post</button>
+    </form>
 </body>
 </html>

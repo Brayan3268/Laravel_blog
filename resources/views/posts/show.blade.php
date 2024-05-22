@@ -14,5 +14,7 @@
     <p>
         {{ $post->content }}
     </p>
+
+    <a href="/posts/{{ $post->id }}/edit">Editar post</a>
 </body>
 </html>
